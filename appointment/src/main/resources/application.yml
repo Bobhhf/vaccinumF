@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: root
+    password: abc123
+    url: jdbc:mysql://localhost:3306/vaccinum_system?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      discovery:
+        cluster-name: GZ
+  application:
+    name: vaccinumF-appointment
+server:
+  port: 8086
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
